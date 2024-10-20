@@ -1,0 +1,60 @@
+@import "../../styles/colors";
+
+.root{
+  background-color: $dark_background;
+  width: 70%;
+  height: fit-content;
+  border-radius: 30px;
+  padding: 3%;
+  color: white;
+  position: relative;
+
+  .header{
+    font-size: 22px;
+    font-weight: bold;
+    margin-bottom: 10px;
+    white-space: normal;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    max-width: 90%;
+  }
+
+  .delete{
+    position: absolute;
+    width: 30px;
+    height: 30px;
+    right: 5px;
+    border-radius: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    img{
+      margin: 0 auto;
+      width: 20px;
+      height: 20px;
+    }
+
+    &:hover{
+      cursor: pointer;
+      background-color: $hover_color;
+    }
+  }
+
+  .count_votes{
+    margin-top: 10px;
+    font-size: 12px;
+  }
+
+}
+
+.root:nth-child(n+2){
+  margin-top: 15px;
+}
+
+@media (max-width: 1050px) {
+  .root{
+    width: 85%;
+  }
+}
+

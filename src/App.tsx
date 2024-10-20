@@ -1,26 +1,27 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React, {useState} from 'react';
+import Button from "./components/Button/Button";
+import Background from "./components/Background/Background";
+import css from './app.module.scss'
+import FormCreatePoll from "./components/FormCreatePoll/FormCreatePoll";
+import ArrayPolls from "./components/ArrayPolls/ArrayPolls";
+
 
 function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+    const [open, setOpen] = useState(false)
+    return (
+        <div className={css.App}>
+            <Button size={'large'} type={'button'}
+                    onClick={() => setOpen(!open)}>{!open ? 'Создать' : 'Скрыть'}</Button>
+            {
+                open && <Background>
+                    <FormCreatePoll open={open} setOpen={setOpen}/>
+                </Background>
+            }
+            <Background>
+                <ArrayPolls/>
+            </Background>
+        </div>
+    );
 }
 
 export default App;

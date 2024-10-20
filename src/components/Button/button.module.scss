@@ -1,0 +1,32 @@
+@import "../../styles/colors";
+
+.root{
+  min-height: 46px;
+  padding: 11px 16px;
+  cursor: pointer;
+  border-radius: 6px;
+  border: none;
+  color: #fff;
+  background-color: $default_button_color;
+
+  &:not(.disabled):hover {
+    background-color: $default_button_color_hover;
+  }
+
+  &.disabled {
+    background-color: $disabled_button_color;
+    color: $text_color_disabled;
+    cursor: default;
+  }
+}
+
+.small {
+  min-height: 32px;
+  padding: 4px 16px;
+  border-radius: 4px;
+}
+
+.large {
+  min-height: 54px;
+  border-radius: 10px;
+}

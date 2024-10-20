@@ -1,0 +1,36 @@
+.root {
+  color: white;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+
+  .option {
+    display: flex;
+    gap: 10px;
+    margin: 10px 0;
+  }
+
+  input[type=text] {
+    outline: none;
+    margin-left: 10px;
+    height: 25px;
+  }
+
+  img {
+    width: 25px;
+    height: 25px;
+    cursor: pointer;
+  }
+
+  .buttons {
+    width: 40%;
+  }
+}
+
+@media (max-width: 400px) {
+  .root {
+    .buttons {
+      width: 50%;
+    }
+  }
+}
