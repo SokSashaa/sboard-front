@@ -1,3 +1,5 @@
+@import "../../../styles/colors";
+
 .root {
   width: 100%;
   height: fit-content;
@@ -15,7 +17,7 @@
 
   &:hover {
     cursor: pointer;
-    background-color: rgba(255, 255, 255, .3);
+    background-color: $hover_color;
   }
 }
 
